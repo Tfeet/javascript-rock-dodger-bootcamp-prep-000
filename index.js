@@ -78,7 +78,7 @@ moveRock(rock);
    */
    
   function moveRock() {
-    
+rock.style.top = `${top += 2}px`;
     // implement me!
     // (use the comments below to guide you!)
     /**
@@ -86,7 +86,7 @@ moveRock(rock);
      * we should call endGame().
      */
 
-rock.style.top = `${top += 2}px`;
+
 if(checkCollision(rock))
   return endGame();
     /**
