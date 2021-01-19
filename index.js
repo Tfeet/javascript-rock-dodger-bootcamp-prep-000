@@ -174,7 +174,7 @@ function moveDodgerLeft() {
 }
 
 function moveDodgerRight() {
-   window.requestAnimationFrame(function() {
+  window.requestAnimationFrame(function()  {
      const left = positionToInteger(DODGER.style.left);
      
      if (left < 360) {
