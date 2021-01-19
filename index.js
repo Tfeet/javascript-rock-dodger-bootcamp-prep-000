@@ -187,16 +187,19 @@ function moveDodgerRight() {
  * @param {string} p The position property
  * @returns {number} The position as an integer (without 'px')
  */
-function positionToInteger(p) {
-  return parseInt(p.split('px')[0]) || 0;
-}
+ var leftNumbers = dodger.style.left.replace('px', '')
+        var left = parseInt(leftNumbers, 10)
+        var target = left + 4;
 
-function start() {
-  window.addEventListener('keydown', moveDodger);
+    if (left > 356) { return; }
 
-  START.style.display = 'none';
+    step();
 
-  gameInterval = setInterval(function() {
-    createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)));
-  }, 1000);
+    function step() {
+      dodger.style.left = `${left += 1}px`
+
+      if (target > left) {     
+          window.requestAnimationFrame(step)
+        }
+      }
 }
