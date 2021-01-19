@@ -123,10 +123,10 @@ window.requestAnimationFrame(moveRock);
  */
 function endGame() {
   clearInterval(gameInterval);
-
-  ROCKS.forEach(function(rock) { rock.remove() });
-
+  ROCKS.forEach(function(rock) { rock.remove()});
   document.removeEventListener('keydown', moveDodger);
+  START.innerHTML="YOU LOSE!";
+  START.style.display='inline';
 }
 
 function moveDodger(e) {
