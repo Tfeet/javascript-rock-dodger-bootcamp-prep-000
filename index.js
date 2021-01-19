@@ -86,7 +86,7 @@ rock.style.top = `${top += 2}px`;
      * we should call endGame().
      */
 
-  
+if   
     /**
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
