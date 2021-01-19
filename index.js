@@ -87,7 +87,7 @@ rock.style.top = `${top += 2}px`;
      */
 
 if (window.checkCollision(rock))  {
-  
+  window.endGame
 }
     /**
      * Otherwise, if the rock hasn't reached the bottom of
